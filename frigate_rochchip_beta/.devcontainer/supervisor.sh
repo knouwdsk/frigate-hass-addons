@@ -90,6 +90,7 @@ function run_supervisor() {
         -v /etc/machine-id:/etc/machine-id:ro \
         -e SUPERVISOR_SHARE="/tmp/supervisor_data" \
         -e SUPERVISOR_NAME=hassio_supervisor \
+        -rk \
         -e SUPERVISOR_DEV=1 \
         -e SUPERVISOR_MACHINE="qemux86-64" \
         "homeassistant/amd64-hassio-supervisor:${SUPERVISOR_VERSON}"
